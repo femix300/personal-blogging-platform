@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+
+# environmental variables
+.env
+
+# certificate files
+cert.pem
+key.pem
