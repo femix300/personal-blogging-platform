@@ -278,4 +278,4 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ---
 
-**Note:** This is a portfolio project demonstrating backend development skills including RESTful API design, database modeling, ORM usage, and clean code architecture.
+**Note:** This is a portfolio project demonstrating my backend development skills including RESTful API design, database modeling, ORM usage, and clean code architecture.
