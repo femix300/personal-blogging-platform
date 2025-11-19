@@ -56,3 +56,23 @@ export const getPostById = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+// manually delete tags that are not attached to any posts
+export const deleteOrphanedTags = async (req, res) => {
+  try {
+    const allTags = await Tag.findAll();
+    let deletedCount = 0;
+
+    for (const tag of allTags) {
+      const postCount = await tag.countPosts();
+      if (postCount === 0) {
+        await tag.destroy();
+        deletedCount++;
+      }
+    }
+
+    res.json({ message: `Deleted ${deletedCount} orphaned tags(s)`, deletedCount });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
