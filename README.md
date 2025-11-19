@@ -126,6 +126,7 @@ The server will start on `http://localhost:3000` and automatically sync the data
 |--------|----------|-------------|
 | GET | `/tags` | Get all tags |
 | GET | `/tags/:tagName/posts` | Get all posts with a specific tag |
+| DELETE | `/tags/cleanup` | Delete orphaned tags |
 
 ## 🧪 Testing the API
 
