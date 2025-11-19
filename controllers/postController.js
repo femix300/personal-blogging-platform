@@ -10,7 +10,7 @@ export const createPost = async (req, res) => {
     if (tags && tags.length > 0) {
       const tagInstances = await Promise.all(
         tags.map(tagName =>
-          Tag.findOrCreate({ where: { name: tagName.toLowerCase() } })
+          Tag.findOrCreate({ where: { name: tagName } })
         )
       );
 
